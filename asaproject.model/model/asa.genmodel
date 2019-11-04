@@ -11,16 +11,28 @@
   <genPackages prefix="Asa" basePackage="asaproject.model" disposableProviderFactory="true"
       ecorePackage="asa.ecore#/">
     <genClasses ecoreClass="asa.ecore#//Configuration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/components"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/composites"/>
     </genClasses>
     <genClasses ecoreClass="asa.ecore#//Component">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Component/ports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Component/services"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Component/underComponents"/>
     </genClasses>
+    <genClasses ecoreClass="asa.ecore#//RequiredPort"/>
+    <genClasses ecoreClass="asa.ecore#//ProvidedPort"/>
+    <genClasses ecoreClass="asa.ecore#//Connector"/>
+    <genClasses ecoreClass="asa.ecore#//RequiredService"/>
+    <genClasses ecoreClass="asa.ecore#//ProvidedService"/>
+    <genClasses image="false" ecoreClass="asa.ecore#//CompositePattern">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//CompositePattern/interfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//CompositePattern/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="asa.ecore#//Properties"/>
+    <genClasses ecoreClass="asa.ecore#//Interface"/>
     <genClasses ecoreClass="asa.ecore#//Port"/>
     <genClasses ecoreClass="asa.ecore#//Service"/>
-    <genClasses ecoreClass="asa.ecore#//Connector"/>
+    <genClasses image="false" ecoreClass="asa.ecore#//Role"/>
+    <genClasses ecoreClass="asa.ecore#//RequiredRole"/>
+    <genClasses ecoreClass="asa.ecore#//ProvidedRole"/>
+    <genClasses image="false" ecoreClass="asa.ecore#//IComponent"/>
+    <genClasses image="false" ecoreClass="asa.ecore#//IConnector"/>
   </genPackages>
 </genmodel:GenModel>

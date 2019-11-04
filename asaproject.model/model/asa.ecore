@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="asa" nsURI="http://www.example.org/asa" nsPrefix="asa">
-  <eClassifiers xsi:type="ecore:EClass" name="Configuration">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="#//Component" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
-        eType="#//Connector" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration" eSuperTypes="#//CompositePattern">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composites" eType="#//CompositePattern"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Component">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ports" upperBound="-1"
-        eType="#//Port" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//Service" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//CompositePattern">
     <eStructuralFeatures xsi:type="ecore:EReference" name="underComponents" upperBound="-1"
-        eType="#//Component" containment="true"/>
+        eType="#//CompositePattern" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Port"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Service"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredPort" eSuperTypes="#//Port"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedPort" eSuperTypes="#//Port"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//CompositePattern"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredService" eSuperTypes="#//Service"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedService" eSuperTypes="#//Service"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositePattern" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" lowerBound="1"
+        upperBound="-1" eType="#//Interface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Properties" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Properties"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true" eSuperTypes="#//IComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Service" abstract="true" eSuperTypes="#//IComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true" eSuperTypes="#//IConnector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredRole" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedRole" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IComponent" abstract="true" interface="true"
+      eSuperTypes="#//Interface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IConnector" abstract="true" interface="true"
+      eSuperTypes="#//Interface"/>
 </ecore:EPackage>
