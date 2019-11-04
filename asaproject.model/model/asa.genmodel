@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/asaproject.model/src-gen" creationIcons="false"
+    editDirectory="/asaproject.model.edit/src-gen" editorDirectory="/asaproject.model.editor/src-gen"
+    modelPluginID="asaproject.model" modelName="Asa" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>asa.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Asa" basePackage="asaproject.model" disposableProviderFactory="true"
+      ecorePackage="asa.ecore#/">
+    <genClasses ecoreClass="asa.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/connectors"/>
+    </genClasses>
+    <genClasses ecoreClass="asa.ecore#//Component">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Component/ports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Component/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//Component/underComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="asa.ecore#//Port"/>
+    <genClasses ecoreClass="asa.ecore#//Service"/>
+    <genClasses ecoreClass="asa.ecore#//Connector"/>
+  </genPackages>
+</genmodel:GenModel>
