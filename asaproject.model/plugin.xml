@@ -9,16 +9,16 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated asa -->
       <package
-            uri="http://www.example.org/asa"
-            class="asaproject.model.asa.AsaPackage"
+            uri="http://www.example.org/M1"
+            class="asaproject.model.asa.M1.M1Package"
             genModel="model/asa.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated asa -->
       <package
-            uri="http://www.example.org/M1"
-            class="asaproject.model.asa.M1.M1Package"
+            uri="http://www.example.org/M2"
+            class="asaproject.model.asa.M2.M2Package"
             genModel="model/asa.genmodel"/>
    </extension>
 

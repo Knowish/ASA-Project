@@ -10,69 +10,88 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Asa" basePackage="asaproject.model" disposableProviderFactory="true"
       ecorePackage="asa.ecore#/">
-    
-    <nestedGenPackages prefix="M2" disposableProviderFactory="true" ecorePackage="asa.ecore#//M2">  
-    <genClasses ecoreClass="asa.ecore#//M2/Configuration">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/components"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/connectors"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Configuration/ports"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/Component">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Component/configuration"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Component/icomponents"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/RequiredPort"/>
-    <genClasses ecoreClass="asa.ecore#//M2/ProvidedPort"/>
-    <genClasses ecoreClass="asa.ecore#//M2/Connector">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Connector/glue"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Connector/iconnectors"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/RequiredService"/>
-    <genClasses ecoreClass="asa.ecore#//M2/ProvidedService"/>
-    <genClasses image="false" ecoreClass="asa.ecore#//M2/ArchitecturalElement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//ArchitecturalElement/properties"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//ArchitecturalElement/elements"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//ArchitecturalElement/parent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asa.ecore#//ArchitecturalElement/name"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/Property"/>
-    <genClasses ecoreClass="asa.ecore#//M2/Port">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Port/configuration"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/Service"/>
-    <genClasses image="false" ecoreClass="asa.ecore#//M2/Role"/>
-    <genClasses ecoreClass="asa.ecore#//M2/RequiredRole"/>
-    <genClasses ecoreClass="asa.ecore#//M2/ProvidedRole"/>
-    <genClasses image="false" ecoreClass="asa.ecore#//M2/IComponent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asa.ecore#//IComponent/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//IComponent/component"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="asa.ecore#//M2/IConnector">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asa.ecore#//IConnector/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//IConnector/connector"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/Glue"/>
-    <genClasses ecoreClass="asa.ecore#//M2/Link"/>
-    <genClasses ecoreClass="asa.ecore#//M2/Binding">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Binding/ports"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/Attachment">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Attachment/port"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference asa.ecore#//Attachment/role"/>
-    </genClasses>
-    <genClasses ecoreClass="asa.ecore#//M2/ArchitecturalSystem">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//ArchitecturalSystem/architecturalElements"/>
-    </genClasses>
-    </nestedGenPackages>
-    
-    
     <nestedGenPackages prefix="M1" disposableProviderFactory="true" ecorePackage="asa.ecore#//M1">
       <genClasses ecoreClass="asa.ecore#//M1/Configuration_ClientServer"/>
       <genClasses ecoreClass="asa.ecore#//M1/Component_Client"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Component_RPC"/>
       <genClasses ecoreClass="asa.ecore#//M1/Component_Server"/>
-      <genClasses ecoreClass="asa.ecore#//M1/Connector_RPC"/>
-      <genClasses ecoreClass="asa.ecore#//M1/Attachment_ClientToRPC"/>
-      <genClasses ecoreClass="asa.ecore#//M1/Attachment_RPCToServer"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Binding_Server_Syst"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Binding_Client_Syst"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_Client_RPC"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_RPC_Server"/>
+      <genClasses image="false" ecoreClass="asa.ecore#//M1/Configuration_Server"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Component_ConnectionManager"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Component_Database"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Component_SecurityManager"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Connector_CM_DB"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Connector_CM_SM"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Connector_SM_DB"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_CM_DB"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_CM_SM"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_SM_CM"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_SM_DB"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_DB_SM"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Attachment_DB_CM"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Binding_CM_Server"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="M2" disposableProviderFactory="true" ecorePackage="asa.ecore#//M2">
+      <genClasses ecoreClass="asa.ecore#//M2/Configuration">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asa.ecore#//M2/Configuration/components"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asa.ecore#//M2/Configuration/connectors"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/Configuration/ports"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/Component">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asa.ecore#//M2/Component/configuration"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/Component/icomponents"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/RequiredPort"/>
+      <genClasses ecoreClass="asa.ecore#//M2/ProvidedPort"/>
+      <genClasses ecoreClass="asa.ecore#//M2/Connector">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/Connector/glue"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/Connector/iconnectors"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/RequiredService"/>
+      <genClasses ecoreClass="asa.ecore#//M2/ProvidedService"/>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/ArchitecturalElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/ArchitecturalElement/properties"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/ArchitecturalElement/elements"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference asa.ecore#//M2/ArchitecturalElement/parent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asa.ecore#//M2/ArchitecturalElement/name"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/Property"/>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/Port">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference asa.ecore#//M2/Port/configuration"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/Service"/>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/Role"/>
+      <genClasses ecoreClass="asa.ecore#//M2/RequiredRole"/>
+      <genClasses ecoreClass="asa.ecore#//M2/ProvidedRole"/>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/IComponent">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asa.ecore#//M2/IComponent/name"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference asa.ecore#//M2/IComponent/component"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/IConnector">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asa.ecore#//M2/IConnector/name"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference asa.ecore#//M2/IConnector/connector"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/Glue"/>
+      <genClasses image="false" ecoreClass="asa.ecore#//M2/Link"/>
+      <genClasses ecoreClass="asa.ecore#//M2/Binding">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asa.ecore#//M2/Binding/ports"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/Attachment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asa.ecore#//M2/Attachment/ports"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asa.ecore#//M2/Attachment/roles"/>
+      </genClasses>
+      <genClasses ecoreClass="asa.ecore#//M2/ArchitecturalSystem">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asa.ecore#//M2/ArchitecturalSystem/architecturalElements"/>
+      </genClasses>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

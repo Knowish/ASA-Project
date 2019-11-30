@@ -22,40 +22,184 @@ public interface M1Factory extends EFactory {
 	M1Factory eINSTANCE = asaproject.model.asa.M1.impl.M1FactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Client Server System</em>'.
+	 * Returns a new object of class '<em>Configuration Client Server</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Client Server System</em>'.
+	 * @return a new object of class '<em>Configuration Client Server</em>'.
 	 * @generated
 	 */
-	Client_Server_System createClient_Server_System();
+	Configuration_ClientServer createConfiguration_ClientServer();
 
 	/**
-	 * Returns a new object of class '<em>Client</em>'.
+	 * Returns a new object of class '<em>Component Client</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Client</em>'.
+	 * @return a new object of class '<em>Component Client</em>'.
 	 * @generated
 	 */
-	Client createClient();
+	Component_Client createComponent_Client();
 
 	/**
-	 * Returns a new object of class '<em>Server</em>'.
+	 * Returns a new object of class '<em>Component RPC</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Server</em>'.
+	 * @return a new object of class '<em>Component RPC</em>'.
 	 * @generated
 	 */
-	Server createServer();
+	Component_RPC createComponent_RPC();
 
 	/**
-	 * Returns a new object of class '<em>rpc</em>'.
+	 * Returns a new object of class '<em>Binding Server Syst</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>rpc</em>'.
+	 * @return a new object of class '<em>Binding Server Syst</em>'.
 	 * @generated
 	 */
-	rpc createrpc();
+	Binding_Server_Syst createBinding_Server_Syst();
+
+	/**
+	 * Returns a new object of class '<em>Binding Client Syst</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Binding Client Syst</em>'.
+	 * @generated
+	 */
+	Binding_Client_Syst createBinding_Client_Syst();
+
+	/**
+	 * Returns a new object of class '<em>Attachment Client RPC</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment Client RPC</em>'.
+	 * @generated
+	 */
+	Attachment_Client_RPC createAttachment_Client_RPC();
+
+	/**
+	 * Returns a new object of class '<em>Attachment RPC Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment RPC Server</em>'.
+	 * @generated
+	 */
+	Attachment_RPC_Server createAttachment_RPC_Server();
+
+	/**
+	 * Returns a new object of class '<em>Component Connection Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Connection Manager</em>'.
+	 * @generated
+	 */
+	Component_ConnectionManager createComponent_ConnectionManager();
+
+	/**
+	 * Returns a new object of class '<em>Component Database</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Database</em>'.
+	 * @generated
+	 */
+	Component_Database createComponent_Database();
+
+	/**
+	 * Returns a new object of class '<em>Component Security Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Security Manager</em>'.
+	 * @generated
+	 */
+	Component_SecurityManager createComponent_SecurityManager();
+
+	/**
+	 * Returns a new object of class '<em>Connector CM DB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connector CM DB</em>'.
+	 * @generated
+	 */
+	Connector_CM_DB createConnector_CM_DB();
+
+	/**
+	 * Returns a new object of class '<em>Connector CM SM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connector CM SM</em>'.
+	 * @generated
+	 */
+	Connector_CM_SM createConnector_CM_SM();
+
+	/**
+	 * Returns a new object of class '<em>Connector SM DB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connector SM DB</em>'.
+	 * @generated
+	 */
+	Connector_SM_DB createConnector_SM_DB();
+
+	/**
+	 * Returns a new object of class '<em>Attachment CM DB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment CM DB</em>'.
+	 * @generated
+	 */
+	Attachment_CM_DB createAttachment_CM_DB();
+
+	/**
+	 * Returns a new object of class '<em>Attachment CM SM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment CM SM</em>'.
+	 * @generated
+	 */
+	Attachment_CM_SM createAttachment_CM_SM();
+
+	/**
+	 * Returns a new object of class '<em>Attachment SM CM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment SM CM</em>'.
+	 * @generated
+	 */
+	Attachment_SM_CM createAttachment_SM_CM();
+
+	/**
+	 * Returns a new object of class '<em>Attachment SM DB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment SM DB</em>'.
+	 * @generated
+	 */
+	Attachment_SM_DB createAttachment_SM_DB();
+
+	/**
+	 * Returns a new object of class '<em>Attachment DB SM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment DB SM</em>'.
+	 * @generated
+	 */
+	Attachment_DB_SM createAttachment_DB_SM();
+
+	/**
+	 * Returns a new object of class '<em>Attachment DB CM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attachment DB CM</em>'.
+	 * @generated
+	 */
+	Attachment_DB_CM createAttachment_DB_CM();
+
+	/**
+	 * Returns a new object of class '<em>Binding CM Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Binding CM Server</em>'.
+	 * @generated
+	 */
+	Binding_CM_Server createBinding_CM_Server();
 
 	/**
 	 * Returns the package supported by this factory.
