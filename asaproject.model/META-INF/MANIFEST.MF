@@ -1,7 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: asaproject.model
-Bundle-SymbolicName: asaproject.model; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: asaproject.model;singleton:=true
+Automatic-Module-Name: asaproject.model
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: asaproject.model.asa,
+ asaproject.model.asa.M1,
+ asaproject.model.asa.M1.impl,
+ asaproject.model.asa.M1.util,
+ asaproject.model.asa.impl,
+ asaproject.model.asa.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

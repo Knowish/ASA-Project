@@ -27,3 +27,11 @@ hs_err_pid*
 .project
 .classpath
 .metadata
+
+/target/
+/MHServer/target/
+.idea/
+/.settings
+/.project
+/.classpath
+*.iml
